@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Fireflyio Ui Monitoring</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript">
+      let xhr = null;
+      const env = ENV.FIREFLYIO_UI_MONITORING;
+      const app = document.getElementById('app');
+
+      const buildPage = (a) => {
+        if (xhr.status !== 200) return ;
+        
+        const monitoring_infos = JSON.parse(xhr.response);
+        app.innerHTML = '';
+
+        const servers_document = document.createElement('h3');
+        servers_document.innerText = `Total servers: ${monitoring_infos.total_servers} / ${monitoring_infos.max_number_servers}`;
+        app.appendChild(servers_document);
+        
+        monitoring_infos.servers_list.map((server, key) => {
+          const server_document = document.createElement('p');
+          server_document.innerText = `Server #${key + 1} / ${monitoring_infos.max_number_servers}: ${server.url} with ${server.total_clients} / ${monitoring_infos.max_number_users_per_server} clients`;
+          app.appendChild(server_document);
+        });
+      };
+
+      const sendRequest = () => {
+        xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', buildPage);
+        xhr.open('get', env.prefix_ui_monitoring + '/json?access_token=' + env.access_token, true);
+        xhr.send();
+        return sendRequest;
+      };
+
+      setInterval(sendRequest(), 3000);
+    </script>
+  </body>
+</html>

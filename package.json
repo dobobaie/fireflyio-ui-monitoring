@@ -1,0 +1,24 @@
+{
+  "name": "fireflyio-ui-monitoring",
+  "version": "0.0.1",
+  "description": "Fireflyio ui-monitoring is a fireflyio module to visualize the fireflyio-monitoring activities in real time",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dobobaie/fireflyio-ui-monitoring.git"
+  },
+  "keywords": [
+    "socket.io",
+    "rest",
+    "api"
+  ],
+  "author": "Dobobaie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dobobaie/fireflyio-ui-monitoring/issues"
+  },
+  "homepage": "https://github.com/dobobaie/fireflyio-ui-monitoring#readme"
+}
