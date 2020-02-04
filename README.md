@@ -10,6 +10,7 @@ Fireflyio ui-monitoring is a fireflyio module to visualize the [fireflyio-monito
 
 [Fireflyio server](https://github.com/dobobaie/fireflyio)  
 [Fireflyio client](https://github.com/dobobaie/fireflyio-client)  
+[Fireflyio module router](https://github.com/dobobaie/fireflyio-router)  
 [Fireflyio module monitoring](https://github.com/dobobaie/fireflyio-monitoring)  
 [Fireflyio module ui-monitoring](https://github.com/dobobaie/fireflyio-ui-monitoring)  
 
@@ -19,7 +20,7 @@ Fireflyio ui-monitoring is a fireflyio module to visualize the [fireflyio-monito
 $ unavaible
 ```
 
-## 💻 Add the module to `fireflyio`
+## 👋 Hello fireflyio-ui-monitoring
 
 ```js
 const Fireflyio = require('fireflyio');
