@@ -31,7 +31,6 @@ const app = new Fireflyio();
 
 app.extend(FireflyioMonitoring);
 app.extend(FireflyioUiMonitoring, {
-  listenTo: 6633, // required
   accessToken: 'abc132' // optional
 });
 
